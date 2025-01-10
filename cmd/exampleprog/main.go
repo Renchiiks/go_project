@@ -3,6 +3,8 @@ package main
 import (
 	"github.com/Renchiiks/go_project/internal/app"
 	"github.com/Renchiiks/go_project/internal/repository/carrepo"
+	//"log"
+
 	//"github.com/user1/mycoollog"
 
 	"log/slog"
@@ -14,7 +16,7 @@ func main() {
 
 	carsRepo, err := carrepo.New(conf.Host, conf.Port)
 	if err != nil {
-		log
+		slog.Error("Could not initialize car repo", "error", err)
 	}
 
 	application := app.New(carsRepo)

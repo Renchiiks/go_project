@@ -1,7 +1,9 @@
 package app
 
+import "github.com/Renchiiks/go_project/internal/repository/carrepo"
+
 type App struct {
-	repo Repo
+	repo carrepo.Car
 }
 
 type Repo interface {
@@ -10,8 +12,9 @@ type Repo interface {
 }
 
 func New() *App {
+
 	app := &App{
-		repo: repo,
+		repo: carrepo.Car{},
 	}
 	return app
 }
