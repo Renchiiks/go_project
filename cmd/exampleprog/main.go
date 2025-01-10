@@ -1,9 +1,11 @@
 package main
 
 import (
-	"github.com/user/exampleprog/internal/app"
-	"github.com/user/exampleprog/internal/reposotory/carrepo"
-	"github.com/user1/mycoollog"
+	"github.com/Renchiiks/go_project/internal/app"
+	"github.com/Renchiiks/go_project/internal/repository/carrepo"
+	//"github.com/user1/mycoollog"
+
+	"log/slog"
 )
 
 func main() {

@@ -1,9 +1,19 @@
 package app
 
-type App struct{}
+type App struct {
+	repo Repo
+}
+
+type Repo interface {
+	UpdateCars() error
+	DeleteCars() error
+}
 
 func New() *App {
-	return nil
+	app := &App{
+		repo: repo,
+	}
+	return app
 }
 
 func (app *App) Run() {
